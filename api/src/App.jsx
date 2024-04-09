@@ -9,7 +9,7 @@ function App() {
 
   const pobierzDaneOFilmach = ()=>{
 
-    fetch("https://swapi.dev/api/films")
+    fetch("https://swapi.dev/api/people")
     .then( res => {
       console.log(res)
       return res.json()
@@ -23,7 +23,7 @@ function App() {
 
     <>
      
-     <h1>Super filmy</h1>
+     <h1>Star Wars</h1>
      <button onClick={pobierzDaneOFilmach}>Pobierz dane</button>
      <Movies listaFilmow={filmy}></Movies>
 
