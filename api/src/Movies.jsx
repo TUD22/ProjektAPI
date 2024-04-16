@@ -1,17 +1,18 @@
-function Movies({listaFilmow}){
+function Movies({listaFilmow, tytul}){
 
 
     return(
        <>
             <h1>lista</h1>
             <table className="tabela">
-                <tr>
+                {tytul}
+                {/* <tr>
                     <th>imie</th>
                     <th>wzrost</th>
                     <th>płeć</th>
                     <th>kolor oczu</th>
                     <th>waga</th>
-                </tr>
+                </tr> */}
                 {
                     listaFilmow.map(item=> <tr><td>{item.name}</td><td>{item.height}</td><td>{item.gender}</td><td>{item.eye_color}</td><td>{item.mass}</td></tr>)
                 }
