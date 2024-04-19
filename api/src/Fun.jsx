@@ -1,6 +1,6 @@
-import Movies from './Movies'
 import { useState } from 'react'
 import './Fun.css'
+import Postacie from './Postacie'
 
 function Fun(){
   const [filmy, setFilmy] = useState([])
@@ -14,17 +14,17 @@ function Fun(){
     })
     .then(data=> {
         setFilmy(data.results)
-        console.log(data.results)})
+        setTh(<tr><th><button>imie</button></th><th><button>wzrost</button></th><th><button>płeć</button></th><th><button>kolor oczu</button></th><th><button>waga</button></th></tr>)
+        console.log(filmy)})
     .catch(err => console.log(err.message))
 
 
-    setTh(<tr><th>imie</th><th>wzrost</th><th>płeć</th><th>kolor oczu</th><th>waga</th></tr>)
   }
   return (
 
     <>
      <button onClick={pobierzDaneOFilmach}>Pobierz dane</button>
-     <Movies listaFilmow={filmy} tytul={th}/>
+     <Postacie listaFilmow={filmy} tytul={th}/>
     </>
   )
 }
